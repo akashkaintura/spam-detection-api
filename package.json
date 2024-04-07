@@ -17,6 +17,7 @@
     "mysql2": "^3.9.3",
     "sequelize": "^6.37.2",
     "sqlite3": "^5.1.7",
-    "swagger-ui-express": "^5.0.0"
+    "swagger-ui-express": "^5.0.0",
+    "yamljs": "^0.3.0"
   }
 }

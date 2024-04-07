@@ -8,7 +8,7 @@ const authRoutes = require('./routes/authRoutes');
 const contactRoutes = require('./routes/contactRoutes');
 const searchRoutes = require('./routes/searchRoutes');
 
-const swaggerDocument = YAML.load('./path/to/swagger.yaml');
+const swaggerDocument = YAML.load('./swagger.yaml');
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
