@@ -1,0 +1,152 @@
+{
+    "info": {
+      "_postman_id": "your_postman_id_here",
+      "name": "Spam Detection API",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "User Registration",
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n\t\"name\": \"\",\n\t\"phoneNumber\": \"\",\n\t\"email\": \"\",\n\t\"password\": \"\"\n}"
+          },
+          "url": {
+            "raw": "{{baseUrl}}/auth/register",
+            "protocol": "{{baseUrl}}",
+            "host": [
+              "localhost"
+            ],
+            "path": [
+              "auth",
+              "register"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "User Login",
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n\t\"phoneNumber\": \"\",\n\t\"password\": \"\"\n}"
+          },
+          "url": {
+            "raw": "{{baseUrl}}/auth/login",
+            "protocol": "{{baseUrl}}",
+            "host": [
+              "localhost"
+            ],
+            "path": [
+              "auth",
+              "login"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Mark Number as Spam",
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n\t\"phoneNumber\": \"\"\n}"
+          },
+          "url": {
+            "raw": "{{baseUrl}}/contacts/mark-spam",
+            "protocol": "{{baseUrl}}",
+            "host": [
+              "localhost"
+            ],
+            "path": [
+              "contacts",
+              "mark-spam"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Search Contacts by Name",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "{{baseUrl}}/search/by-name?name=",
+            "protocol": "{{baseUrl}}",
+            "host": [
+              "localhost"
+            ],
+            "path": [
+              "search",
+              "by-name"
+            ],
+            "query": [
+              {
+                "key": "name",
+                "value": "",
+                "equals": true,
+                "description": ""
+              }
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Search Contacts by Phone Number",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "{{baseUrl}}/search/by-phone?phoneNumber=",
+            "protocol": "{{baseUrl}}",
+            "host": [
+              "localhost"
+            ],
+            "path": [
+              "search",
+              "by-phone"
+            ],
+            "query": [
+              {
+                "key": "phoneNumber",
+                "value": "",
+                "equals": true,
+                "description": ""
+              }
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Get Contact Details",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "{{baseUrl}}/contacts/:id",
+            "protocol": "{{baseUrl}}",
+            "host": [
+              "localhost"
+            ],
+            "path": [
+              "contacts",
+              ":id"
+            ]
+          }
+        },
+        "response": []
+      }
+    ]
+  }
+  
