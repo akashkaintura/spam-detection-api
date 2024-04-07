@@ -1,10 +1,17 @@
 const express = require('express');
 const app = express();
+const swaggerUi = require('swagger-ui-express');
+const YAML = require('yamljs'); 
 const authMiddleware = require('./middleware/authMiddleware');
 const errorHandler = require('./middleware/errorHandler');
 const authRoutes = require('./routes/authRoutes');
 const contactRoutes = require('./routes/contactRoutes');
 const searchRoutes = require('./routes/searchRoutes');
+
+const swaggerDocument = YAML.load('./path/to/swagger.yaml');
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
 
 // Middleware
 app.use(express.json());
